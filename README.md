@@ -49,12 +49,31 @@ Notes:
 ## Install in Claude Code
 
 ```bash
-git clone https://github.com/<your-username>/bitm-learning-skills.git
+git clone https://github.com/ARAVIND2017/bitm-learning-skills.git
 mkdir -p ~/.claude/skills
 cp -r bitm-learning-skills/skills/* ~/.claude/skills/
 ```
 
 Restart Claude Code. The skills load automatically when a request matches. You can also call one directly, for example `/story-study-coach`.
+
+---
+
+## How to use (after installing)
+
+You do not need to open a skill. Start a **new chat** and ask in plain words; Claude picks the matching skill.
+To force one, name it: *"Use story-study-coach: teach me arrays."*
+
+- Use the **same chat** to continue a course or topic, and a **new chat** for a new subject.
+- Students: answer the check questions yourself. If an answer is wrong, the coach explains again in a different way.
+- Say "make it simpler" or "shorter" any time.
+
+### Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| Skill does not seem to run | Check it is switched on in Customize > Skills, then name it in your message |
+| Upload error on claude.ai | Upload the zip from `dist/` as it is; do not unzip or rename it |
+| No drawings for teaching boards | Turn on the Excalidraw connector, or accept the fallback format |
 
 ---
 
