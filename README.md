@@ -12,6 +12,10 @@ Three Claude skills that teach the **story-first** way:
 
 Works for any engineering subject. It was first built and tested on a C programming bridge course for lateral-entry students.
 
+**All three skills answer the same way:** the content is drawn on an **Excalidraw board** in one fixed order
+(Story -> Connect -> Definition -> Syntax/Formula -> Example -> Mistakes -> Practice/Check questions -> Next step),
+new parts are added below without changing what is above, and the chat reply stays short (2-4 lines).
+
 ---
 
 ## Folder structure
