@@ -6,7 +6,7 @@ Three Claude skills that teach the **story-first** way:
 
 | Skill | For | What it does |
 |---|---|---|
-| `story-teaching-boards` | Faculty | Day-by-day Excalidraw teaching boards, programs sheet, 20-question banks with solutions, revision/quiz boards, mini-project boards |
+| `story-teaching-boards` | Faculty | Exactly two Excalidraw boards per course: Teaching Story Board (course plan, daily theory, revision, project) + Code Board (programs, lab cards, 20-question banks with solutions) |
 | `story-study-coach` | Students | Personal tutor: one concept at a time, checks understanding, revision notes, exam and lab help, study plans |
 | `interview-prep-coach` | Students | Placement prep plan, core subjects, coding practice, aptitude, mock technical + HR interviews with scores |
 
@@ -15,6 +15,11 @@ Works for any engineering subject. It was first built and tested on a C programm
 **All three skills answer the same way:** the content is drawn on an **Excalidraw board** in one fixed order
 (Story -> Connect -> Definition -> Syntax/Formula -> Example -> Mistakes -> Practice/Check questions -> Next step),
 new parts are added below without changing what is above, and the chat reply stays short (2-4 lines).
+
+**Built into every skill:**
+- **Visual lesson:** guided camera tour, numbered section zones, colour legend, drawn stories, animated steps and EXAM POINT highlights.
+- **Accuracy:** programs and SQL are run before outputs are drawn (otherwise marked "hand-traced"), your attached syllabus is followed, and a final check runs before every reply.
+- **One answer = one drawing**, with a Board id in each reply so the board can be continued later.
 
 ---
 
