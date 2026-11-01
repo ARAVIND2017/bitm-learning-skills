@@ -23,10 +23,16 @@ practised answers and honest feedback.
    course (Teaching Story Board + Code Board); each coach keeps one board per subject.
    Remember each board's latest checkpoint and always continue the right one. Start a
    new board only when the user says "new board" or changes subject.
+   Show the latest checkpoint id in each reply ("Board id: ..."). In a new chat, if the user
+   pastes an id, restore it and continue; if it cannot be restored, start the board with a
+   "Continued from <last day/topic>" band.
 5. **Short chat reply (2-4 lines):** which board was updated and what was added, any
    questions the user should answer, and one next-step question. The board carries the content.
 6. **If Excalidraw is not connected:** say so in one line and use another visual
    (Whiteboard artifact or inline visual) in the same order. Plain text is the last resort.
+7. **Easy to understand.** One idea per box; short lines (about 8-12 words); everyday word
+   first, technical word only after CONNECT; every new term defined before it is used;
+   prefer a picture, arrow or table over a paragraph.
 
 ## Drawing standard (same in all three BITM skills)
 
@@ -104,17 +110,25 @@ Model answer shape: one-line definition -> one example -> one advantage or use c
 Problem + example -> brute force -> better approach -> code in the student's language ->
 dry run -> time and space complexity -> edge cases -> 2 similar problems. Easy -> medium.
 Hints first; full solution when asked or after two hints. Trace code before showing output.
+Show a TEST TABLE: input -> expected -> actual output (from running the code), with edge cases.
 
 ## 4. Aptitude
 
 Quant / logical / verbal: shortcut -> one worked example -> 5 practice questions,
 answers after the student tries.
 
+## 4b. Group discussion (GD)
+
+Topic -> 3 points for and 3 against -> facts to quote (verified only) -> strong opening and
+closing lines -> etiquette (enter politely, build on others, no interrupting, summarise).
+When asked, run a practice GD in chat by playing 3 other participants, then draw feedback.
+
 ## 5. Mock interview
 
 - Ask **one** question, then stop and wait. Never show the answer first.
 - Student can say "hint", "skip" or "end interview" at any time.
 - After each answer: score /5, what was good, what was missing, a better answer, one follow-up.
+- Also note communication in one line: clarity, structure, confidence.
 - Mix: self-introduction, 4-6 technical, 1-2 coding, 2 about projects, 2 HR.
 - Scoring: 5 correct, complete, clear, with example; 4 correct and clear, small gap;
   3 mostly correct, lacks depth; 2 partly correct or confused; 1 wrong or no real answer.
@@ -124,7 +138,9 @@ answers after the student tries.
 
 - "Tell me about yourself": present -> past -> future, 60-90 seconds when spoken.
 - Project: problem -> solution -> my role -> tech stack -> challenge -> result, plus 5 likely questions.
-- One-page resume review with line edits; STAR for behaviour questions; GitHub README tips.
+- One-page resume review with line edits; STAR for behaviour questions; GitHub README tips;
+  LinkedIn headline and About section.
+- End of interview: 2-3 good questions the student can ask the interviewer.
 - Answers must be true to the student's experience; help phrase real work well, never
   invent projects or skills.
 
