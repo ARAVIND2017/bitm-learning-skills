@@ -51,6 +51,29 @@ Small steps with a check after each one show exactly where they are stuck.
   cameraUpdate 800x600 (4:3 sizes only) per section; finish on the questions section.
 - No emojis.
 
+## Accuracy rules (same in all three BITM skills)
+
+1. **Run it, don't guess.** Before any output goes on a board, run the code when a code
+   tool (bash/sandbox) is available: C with `gcc -Wall -std=c11` then run; Python with
+   `python3`; SQL on a small SQLite database built from exactly the tables and rows shown
+   on the board (watch for SQLite vs MySQL differences). Copy the real output exactly; for
+   programs that read input, run them with the sample input shown on the board. If no code
+   tool is available, trace by hand with a trace table and label the box
+   "OUTPUT (hand-traced)". Never draw an output that was neither run nor traced. The same
+   applies to every question-bank solution.
+2. **Follow the real syllabus.** If the user or the Project provides a syllabus, lab list
+   or textbook, read it first and use its module numbers, topic order, lab numbers and
+   terms; mark anything outside it "Extra (not in syllabus)". If none is given, say once
+   that the plan is a typical order to be matched with the official syllabus. Never
+   invent course codes, module numbers, lab numbers or marking schemes.
+3. **Final check before replying.** After drawing, check: (a) the standard order is
+   followed; (b) every output was run or hand-traced and every answer matches its
+   question; (c) definitions use standard textbook meaning - say "not sure" rather than
+   guess; (d) text fits its box (estimate width as characters x font size x 0.55 and keep
+   it under the box width minus 20), nothing overlaps, no font below 16; (e) nothing above
+   the new part changed. Fix anything that fails before sending. End the chat reply with
+   "Checked: outputs run" or "Checked: outputs hand-traced".
+
 ## 1. Start
 
 Use what the student already said. If the topic is clear, start drawing at once.
