@@ -57,6 +57,30 @@ formulas first makes students switch off. Never break the order, even for "easy"
   cameraUpdate 800x600 (4:3 sizes only) per section; finish on the questions section.
 - No emojis.
 
+## Visual features (same in all three BITM skills)
+
+Use Excalidraw's own features so the board reads like a guided lesson:
+1. **Guided camera tour.** Before each section, move the camera to it (600x450 for a
+   close-up of the story or a key idea, 800x600 for a normal section). End on the
+   questions, then one final 1600x1200 overview, so the lesson unfolds like slides.
+2. **Section zones + number badges.** Put each section on a light background zone
+   (opacity 30) with a small numbered circle (1-8) at its top-left, so the eye always
+   knows where it is.
+3. **Legend strip** under the title of every new board: Story | Definition | Code |
+   Output | Mistake | Practice, in their colours.
+4. **Draw the story, don't just write it.** Simple shapes for people (circle head +
+   rounded body), objects (plates, coaches, registers) and places, with 1-3 word labels.
+5. **Link arrows.** Dashed coloured arrows from each story object to its technical word,
+   so students see the mapping.
+6. **Animate processes** (loops, stack/queue, sorting, linked-list insert, traversal, data
+   flow): draw a state, nudge the camera, delete the changing elements and redraw them in
+   the new position or colour with NEW ids, step by step. Also keep a numbered
+   "Step 1 -> Step 2 -> ..." strip beside it so the board still reads after the animation.
+7. **Memory pictures for code:** variables as labelled boxes with values, pointers as
+   arrows, arrays as indexed cells, trace tables as grids.
+8. **Highlight what matters:** a yellow "EXAM POINT" tag beside must-write definitions,
+   and a red border on the one thing students most often get wrong.
+
 ## Accuracy rules (same in all three BITM skills)
 
 1. **Run it, don't guess.** Before any output goes on a board, run the code when a code
