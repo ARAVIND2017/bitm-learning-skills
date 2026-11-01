@@ -1,6 +1,6 @@
 ---
 name: story-teaching-boards
-description: Creates beginner-friendly, story-first teaching boards on Excalidraw for any subject, day by day from a course plan - theory boards, programs sheets, 20-question banks with solutions, revision/quiz and mini-project boards. Use when a teacher asks to prepare a class, a day's board, a lesson, practice questions, a question bank, revision or quiz, or says "next day", "continue" or "add below".
+description: Creates beginner-friendly, story-first teaching boards on Excalidraw for any subject, day by day from a course plan - exactly two boards per course (Teaching Story Board + Code Board) holding theory, programs, 20-question banks, revision and project. Use when a teacher asks to prepare a class, a day's board, a lesson, practice questions, a question bank, revision or quiz, or says "next day", "continue" or "add below".
 ---
 
 # Story Teaching Boards (for faculty)
@@ -18,12 +18,17 @@ formulas first makes students switch off. Never break the order, even for "easy"
 2. **Same order on every board:** STORY -> CONNECT -> DEFINITION -> SYNTAX/FORMULA ->
    EXAMPLE (code + OUTPUT + trace, or worked solution with units) -> MISTAKES ->
    PRACTICE/CHECK QUESTIONS -> NEXT STEP. Each section sits under a dark band heading.
-3. **Grow, never rewrite.** Same topic or course -> restore the latest checkpoint and
-   add the new part BELOW. Never move, edit or delete anything above unless asked.
-   New subject, or the user says "new board" -> start a new board.
-4. **Short chat reply (2-4 lines):** what was drawn, any questions the user should
-   answer, and one next-step question. The board carries the content.
-5. **If Excalidraw is not connected:** say so in one line and use another visual
+3. **One answer = one drawing.** Draw the whole answer in ONE `create_view` call
+   (up to about 250 elements), so the user sees one finished board, not several pieces.
+   Restore the latest checkpoint first and add the new part BELOW. Never move, edit or
+   delete anything above unless asked.
+4. **Fixed boards, no extra files.** The teaching skill keeps exactly two boards per
+   course (Teaching Story Board + Code Board); each coach keeps one board per subject.
+   Remember each board's latest checkpoint and always continue the right one. Start a
+   new board only when the user says "new board" or changes subject.
+5. **Short chat reply (2-4 lines):** which board was updated and what was added, any
+   questions the user should answer, and one next-step question. The board carries the content.
+6. **If Excalidraw is not connected:** say so in one line and use another visual
    (Whiteboard artifact or inline visual) in the same order. Plain text is the last resort.
 
 ## Drawing standard (same in all three BITM skills)
@@ -40,20 +45,21 @@ formulas first makes students switch off. Never break the order, even for "easy"
 - Flowcharts: ellipse = start/stop, rectangle = process, diamond = decision,
   parallelogram = input/output (closed line polygon, text on top); label Yes/No;
   loop-back arrows go around the side.
-- Labelled shapes with manual line breaks so text never overflows. About 40-60 elements
-  per call; split bigger sections across calls using the checkpoint. cameraUpdate
-  800x600 (4:3 sizes only) per section; finish on the questions section.
+- Labelled shapes with manual line breaks so text never overflows. Keep labels short
+  so a whole answer fits in one call. Only if it truly cannot fit, finish in a second
+  call and tell the user that the LAST drawing in the chat is the complete board.
+  cameraUpdate 800x600 (4:3 sizes only) per section; finish on the questions section.
 - No emojis.
 
-## 1. What this skill produces
+## 1. Exactly two boards per course
 
-| Output | Where it goes |
+| Board | What goes on it (added below, day after day) |
 |---|---|
-| Theory board (one per day) | Main board for the unit |
-| Programs sheet (worked-problems sheet for non-programming subjects) | One separate board |
-| Question bank: 20 questions per day + solutions | Same separate board, added below the programs |
-| Revision / quiz board | Main board, end of week or unit |
-| Project-launch board | Main board, when a mini project starts |
+| **1. TEACHING STORY BOARD** | Course plan, every day's theory (Level 1 + Level 2), Part 2 deep dives, revision/quiz, project launch, coverage check |
+| **2. CODE BOARD** | Every day's programs (worked problems for non-programming subjects), then that day's 20 questions + solutions |
+
+Never create a third board for the same course. Every reply names the board it updated,
+e.g. "Teaching Story Board: added Day 1 below the course plan."
 
 ## 2. Before starting
 
@@ -95,25 +101,25 @@ Programs must compile; trace every output by hand. C: `int main(void)`, `return 
 never `void main`, `conio.h`, `getch()`, `gets()` or undefined behaviour. Add an exam
 definition, a 2-mark answer and a predict-the-output item where useful.
 
-## 4. Programs sheet (separate board)
+## 4. Code Board - programs (board 2)
 
-Title "Programs: Day by Day"; one band per day; cards P1, P2...: Title -> "Real world:" ->
+Title "<Subject> - Code Board"; one band per day; cards P1, P2...: Title -> "Real world:" ->
 code -> OUTPUT; a REMEMBER box per day; programs different from the theory board.
 Non-programming: "Worked Problems: Day by Day", Given -> Formula -> Substitution -> Answer.
 
-## 5. Question bank (same separate board, below the programs)
+## 5. Code Board - question bank (board 2, below that day's programs)
 
 Band "DAY n PRACTICE: <topics> (20 questions)", two columns Q1-Q10 / Q11-Q20, easy -> hard.
 Band "DAY n SOLUTIONS: how to think -> code -> output"; one card per question: title,
 HOW TO THINK (yellow, 3-4 plain lines), code or working (white), OUTPUT/answer (dark).
 
-## 6. Revision / quiz board
+## 6. Revision / quiz (Teaching Story Board)
 
 Session plan -> journey row of the week's topics -> revision table (Topic | Real world |
 Definition | Syntax, ~10 rows) -> spot-the-error (10 pairs) -> 10 MCQs + answer key ->
 practical test (2 programs; write-up 20 / execution 60 / viva 20) -> holiday homework pack.
 
-## 7. Project-launch board
+## 7. Project launch (Teaching Story Board)
 
 Menu screen mock-up -> "which topic is used where" table -> starter code -> rubric ->
 timeline to demo -> alternative project ideas.
@@ -121,7 +127,8 @@ timeline to demo -> alternative project ideas.
 ## 8. Coverage check
 
 After each unit or "any topics left?": table Topic | Why it matters | Where it fits,
-split into "important" and "good to know"; offer a gap-filler board.
+split into "important" and "good to know"; offer to add gap-filler days to the
+Teaching Story Board.
 
 ## 9. Handling teacher feedback
 
@@ -136,5 +143,6 @@ split into "important" and "good to know"; offer a gap-filler board.
 - [ ] Every output or answer traced by hand
 - [ ] No banned functions or undefined behaviour
 - [ ] Exactly 6 mistakes; 2 in-class + 2 homework
-- [ ] Nothing above the new content changed
+- [ ] Nothing above the new content changed; only the two boards used
+- [ ] Whole answer drawn in one call
 - [ ] Text fits in its boxes; no font below 16
