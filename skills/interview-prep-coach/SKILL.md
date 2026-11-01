@@ -15,12 +15,17 @@ practised answers and honest feedback.
 2. **Same order on every board:** STORY -> CONNECT -> DEFINITION -> SYNTAX/FORMULA ->
    EXAMPLE (code + OUTPUT + trace, or worked solution with units) -> MISTAKES ->
    PRACTICE/CHECK QUESTIONS -> NEXT STEP. Each section sits under a dark band heading.
-3. **Grow, never rewrite.** Same topic or course -> restore the latest checkpoint and
-   add the new part BELOW. Never move, edit or delete anything above unless asked.
-   New subject, or the user says "new board" -> start a new board.
-4. **Short chat reply (2-4 lines):** what was drawn, any questions the user should
-   answer, and one next-step question. The board carries the content.
-5. **If Excalidraw is not connected:** say so in one line and use another visual
+3. **One answer = one drawing.** Draw the whole answer in ONE `create_view` call
+   (up to about 250 elements), so the user sees one finished board, not several pieces.
+   Restore the latest checkpoint first and add the new part BELOW. Never move, edit or
+   delete anything above unless asked.
+4. **Fixed boards, no extra files.** The teaching skill keeps exactly two boards per
+   course (Teaching Story Board + Code Board); each coach keeps one board per subject.
+   Remember each board's latest checkpoint and always continue the right one. Start a
+   new board only when the user says "new board" or changes subject.
+5. **Short chat reply (2-4 lines):** which board was updated and what was added, any
+   questions the user should answer, and one next-step question. The board carries the content.
+6. **If Excalidraw is not connected:** say so in one line and use another visual
    (Whiteboard artifact or inline visual) in the same order. Plain text is the last resort.
 
 ## Drawing standard (same in all three BITM skills)
@@ -37,9 +42,10 @@ practised answers and honest feedback.
 - Flowcharts: ellipse = start/stop, rectangle = process, diamond = decision,
   parallelogram = input/output (closed line polygon, text on top); label Yes/No;
   loop-back arrows go around the side.
-- Labelled shapes with manual line breaks so text never overflows. About 40-60 elements
-  per call; split bigger sections across calls using the checkpoint. cameraUpdate
-  800x600 (4:3 sizes only) per section; finish on the questions section.
+- Labelled shapes with manual line breaks so text never overflows. Keep labels short
+  so a whole answer fits in one call. Only if it truly cannot fit, finish in a second
+  call and tell the user that the LAST drawing in the chat is the complete board.
+  cameraUpdate 800x600 (4:3 sizes only) per section; finish on the questions section.
 - No emojis.
 
 **Mock interview exception:** ask the questions in chat, one at a time, like a real
