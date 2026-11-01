@@ -26,10 +26,16 @@ formulas first makes students switch off. Never break the order, even for "easy"
    course (Teaching Story Board + Code Board); each coach keeps one board per subject.
    Remember each board's latest checkpoint and always continue the right one. Start a
    new board only when the user says "new board" or changes subject.
+   Show the latest checkpoint id in each reply ("Board id: ..."). In a new chat, if the user
+   pastes an id, restore it and continue; if it cannot be restored, start the board with a
+   "Continued from <last day/topic>" band.
 5. **Short chat reply (2-4 lines):** which board was updated and what was added, any
    questions the user should answer, and one next-step question. The board carries the content.
 6. **If Excalidraw is not connected:** say so in one line and use another visual
    (Whiteboard artifact or inline visual) in the same order. Plain text is the last resort.
+7. **Easy to understand.** One idea per box; short lines (about 8-12 words); everyday word
+   first, technical word only after CONNECT; every new term defined before it is used;
+   prefer a picture, arrow or table over a paragraph.
 
 ## Drawing standard (same in all three BITM skills)
 
@@ -94,6 +100,13 @@ If a day has more than 4 topics, confirm the list first.
 
 ## 3. Theory board
 
+**Course plan (first time only):** when asked to list topics, draw the plan at the top of the
+Teaching Story Board: one box per day (day number + 1-2 line topic), coloured by module, a
+legend, today's box with a thick red border, and holiday/flex/revision days marked.
+
+**RECAP strip (Day 2 onwards):** 3 small boxes recalling the previous day's key ideas,
+drawn before Level 1.
+
 **Level 1 - simple picture page (always first):** one story, 3-5 boxes, very few words.
 A student who reads only this page should still understand the idea.
 
@@ -107,7 +120,8 @@ A student who reads only this page should still understand the idea.
 5. EXAMPLE - 2-4 program cards: title, "Real world:" line, complete code, OUTPUT
    (or full worked solution with units).
 6. MISTAKES - exactly 6 red boxes, wrong vs right.
-7. PRACTICE - 2 in-class (blue) + 2 homework (pink).
+7. PRACTICE - 2 in-class (blue) + 2 homework (pink) + 1 EXIT TICKET (predict the output
+   or a one-line answer, checked in the last 3 minutes).
 8. NEXT STEP - next class, one green box.
 
 **"Part 2" deep dive** ("explain clearly", "in detail", "more"): overview picture of all
@@ -120,7 +134,8 @@ thick black divider before a new day.
 
 **Content rules:** same story all day; Indian everyday context (Rs, canteen, UPI, Aadhaar,
 USN, hostel, auto fare, cricket); Kannada/Hindi analogies fine, technical terms in English.
-Programs must compile; trace every output by hand. C: `int main(void)`, `return 0;`;
+One running example for the whole course (e.g. the same Student table every DBMS day).
+Programs must compile and be run (Accuracy rule 1). C: `int main(void)`, `return 0;`;
 never `void main`, `conio.h`, `getch()`, `gets()` or undefined behaviour. Add an exam
 definition, a 2-mark answer and a predict-the-output item where useful.
 
@@ -129,12 +144,15 @@ definition, a 2-mark answer and a predict-the-output item where useful.
 Title "<Subject> - Code Board"; one band per day; cards P1, P2...: Title -> "Real world:" ->
 code -> OUTPUT; a REMEMBER box per day; programs different from the theory board.
 Non-programming: "Worked Problems: Day by Day", Given -> Formula -> Substitution -> Answer.
+Lab programs (e.g. "VTU Lab 7"): add a LAB CARD - Aim -> Algorithm -> Program ->
+Sample input/output -> 5 viva questions with answers.
 
 ## 5. Code Board - question bank (board 2, below that day's programs)
 
 Band "DAY n PRACTICE: <topics> (20 questions)", two columns Q1-Q10 / Q11-Q20, easy -> hard.
 Band "DAY n SOLUTIONS: how to think -> code -> output"; one card per question: title,
 HOW TO THINK (yellow, 3-4 plain lines), code or working (white), OUTPUT/answer (dark).
+Tag each question with marks (2/5/10) and level (Remember / Apply / Analyse).
 
 ## 6. Revision / quiz (Teaching Story Board)
 
@@ -165,7 +183,7 @@ Teaching Story Board.
 - [ ] Standard order kept; one story all day
 - [ ] Every output run (or marked hand-traced); syllabus followed
 - [ ] No banned functions or undefined behaviour
-- [ ] Exactly 6 mistakes; 2 in-class + 2 homework
+- [ ] Exactly 6 mistakes; 2 in-class + 2 homework + exit ticket
 - [ ] Nothing above the new content changed; only the two boards used
 - [ ] Whole answer drawn in one call
 - [ ] Text fits in its boxes; no font below 16
